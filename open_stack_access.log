@@ -1,0 +1,316 @@
+openstack: '--os-auth-url' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  configuration show
+  consistency group add volume
+  consistency group create
+  consistency group delete
+  consistency group list
+  consistency group remove volume
+  consistency group set
+  consistency group show
+  consistency group snapshot create
+  consistency group snapshot delete
+  consistency group snapshot list
+  consistency group snapshot show
+  container create
+  container delete
+  container list
+  container save
+  container set
+  container show
+  container unset
+openstack: 'https://chi.tacc.chameleoncloud.org:5000/v3' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  application credential create
+  application credential delete
+  application credential list
+  application credential show
+  configuration show
+  consistency group add volume
+  consistency group create
+  consistency group delete
+  consistency group list
+  consistency group remove volume
+  consistency group set
+  consistency group show
+  consistency group snapshot create
+  consistency group snapshot delete
+  consistency group snapshot list
+  consistency group snapshot show
+openstack: '--os-project-id' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  project cleanup
+  project create
+  project delete
+  project list
+  project purge
+  project set
+  project show
+openstack: 'e081833d8dde4102af564ed96f10035a' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  credential create
+  credential delete
+  credential list
+  credential set
+  credential show
+  federation domain list
+  federation project list
+  federation protocol create
+  federation protocol delete
+  federation protocol list
+  federation protocol set
+  federation protocol show
+  registered limit create
+  registered limit delete
+  registered limit list
+  registered limit set
+  registered limit show
+openstack: '--os-project-name' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  project cleanup
+  project create
+  project delete
+  project list
+  project purge
+  project set
+  project show
+openstack: 'CHI-221071' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  credential create
+  credential delete
+  credential list
+  credential set
+  credential show
+  federation domain list
+  federation project list
+  federation protocol create
+  federation protocol delete
+  federation protocol list
+  federation protocol set
+  federation protocol show
+  hypervisor list
+  hypervisor show
+  hypervisor stats show
+  registered limit create
+  registered limit delete
+  registered limit list
+  registered limit set
+  registered limit show
+openstack: '--os-user-domain-name' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  configuration show
+  reservation device allocation list
+  reservation device allocation show
+  reservation device capability list
+  reservation device capability show
+  reservation device capability update
+  reservation device create
+  reservation device delete
+  reservation device list
+  reservation device reallocate
+  reservation device set
+  reservation device show
+  reservation device unset
+  reservation floatingip create
+  reservation floatingip delete
+  reservation floatingip list
+  reservation floatingip show
+  reservation host allocation list
+  reservation host allocation show
+  reservation host capability list
+  reservation host capability show
+  reservation host capability update
+  reservation host create
+  reservation host delete
+  reservation host list
+  reservation host reallocate
+  reservation host set
+  reservation host show
+  reservation host unset
+  reservation lease create
+  reservation lease delete
+  reservation lease list
+  reservation lease set
+  reservation lease show
+  reservation network allocation list
+  reservation network allocation show
+  reservation network capability list
+  reservation network capability show
+  reservation network capability update
+  reservation network create
+  reservation network delete
+  reservation network list
+  reservation network set
+  reservation network show
+  reservation network unset
+openstack: 'Default' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  request token authorize
+  request token create
+openstack: '--os-username' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  aggregate add host
+  aggregate cache image
+  aggregate create
+  aggregate delete
+  aggregate list
+  aggregate remove host
+  aggregate set
+  aggregate show
+  aggregate unset
+  consistency group add volume
+  consistency group create
+  consistency group delete
+  consistency group list
+  consistency group remove volume
+  consistency group set
+  consistency group show
+  consistency group snapshot create
+  consistency group snapshot delete
+  consistency group snapshot list
+  consistency group snapshot show
+openstack: 'mtang11@hawk.iit.edu@accounts.google.com' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  configuration show
+openstack: '--os-password' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  hypervisor list
+  hypervisor show
+  hypervisor stats show
+openstack: 'ILoveMinyoongi-55' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  configuration show
+openstack: '--os-region-name' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  aggregate add host
+  aggregate cache image
+  aggregate create
+  aggregate delete
+  aggregate list
+  aggregate remove host
+  aggregate set
+  aggregate show
+  aggregate unset
+  configuration show
+  reservation device allocation list
+  reservation device allocation show
+  reservation device capability list
+  reservation device capability show
+  reservation device capability update
+  reservation device create
+  reservation device delete
+  reservation device list
+  reservation device reallocate
+  reservation device set
+  reservation device show
+  reservation device unset
+  reservation floatingip create
+  reservation floatingip delete
+  reservation floatingip list
+  reservation floatingip show
+  reservation host allocation list
+  reservation host allocation show
+  reservation host capability list
+  reservation host capability show
+  reservation host capability update
+  reservation host create
+  reservation host delete
+  reservation host list
+  reservation host reallocate
+  reservation host set
+  reservation host show
+  reservation host unset
+  reservation lease create
+  reservation lease delete
+  reservation lease list
+  reservation lease set
+  reservation lease show
+  reservation network allocation list
+  reservation network allocation show
+  reservation network capability list
+  reservation network capability show
+  reservation network capability update
+  reservation network create
+  reservation network delete
+  reservation network list
+  reservation network set
+  reservation network show
+  reservation network unset
+openstack: 'CHI@TACC' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  complete
+  consumer create
+  consumer delete
+  consumer list
+  consumer set
+  consumer show
+  endpoint add project
+  endpoint create
+  endpoint delete
+  endpoint group add project
+  endpoint group create
+  endpoint group delete
+  endpoint group list
+  endpoint group remove project
+  endpoint group set
+  endpoint group show
+  endpoint list
+  endpoint remove project
+  endpoint set
+  endpoint show
+  floating ip create
+  floating ip delete
+  floating ip list
+  floating ip pool list
+  floating ip port forwarding create
+  floating ip port forwarding delete
+  floating ip port forwarding list
+  floating ip port forwarding set
+  floating ip port forwarding show
+  floating ip set
+  floating ip show
+  floating ip unset
+  identity provider create
+  identity provider delete
+  identity provider list
+  identity provider set
+  identity provider show
+  security group create
+  security group delete
+  security group list
+  security group rule create
+  security group rule delete
+  security group rule list
+  security group rule show
+  security group set
+  security group show
+  security group unset
+  versions show
+openstack: '--os-interface' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  consistency group add volume
+  consistency group create
+  consistency group delete
+  consistency group list
+  consistency group remove volume
+  consistency group set
+  consistency group show
+  consistency group snapshot create
+  consistency group snapshot delete
+  consistency group snapshot list
+  consistency group snapshot show
+openstack: 'public' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  policy create
+  policy delete
+  policy list
+  policy set
+  policy show
+openstack: '--os-identity-api-version' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  configuration show
+openstack: '3' is not an openstack command. See 'openstack --help'.
+Did you mean one of these?
+  ip availability list
+  ip availability show
+(openstack) 
