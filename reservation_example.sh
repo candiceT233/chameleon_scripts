@@ -34,7 +34,7 @@ lease_name="$1"
 
 # Get the current UTC time and add 10 minutes and 2 hours
 current_time=$(date -u +'%Y-%m-%d %H:%M')
-start_time=$(date -u -d '+10 minutes' +'%Y-%m-%d %H:%M')
+start_time=$(date -u -d '+2 minutes' +'%Y-%m-%d %H:%M')
 end_time=$(date -u -d '+1 hours' +'%Y-%m-%d %H:%M')
 
 # Display the current UTC time, start time, and end time
@@ -46,9 +46,14 @@ echo "Creating lease $lease_name..."
 
 set -x
 
+PUBLIC_NETWORK_ID=$(openstack network show public -c id -f value)
 # Run the openstack command with the provided lease name
 openstack reservation lease create \
   --reservation min=1,max=1,resource_type=physical:host,resource_properties='["=", "$node_type", "compute_skylake"]' \
+  --reservation resource_type=virtual:floatingip,network_id=${PUBLIC_NETWORK_ID},amount=1 \
   --start-date "$start_time" \
   --end-date "$end_time" \
-  "$lease_name" | tee "$lease_name.log"
+  "$lease_name" | tee "$lease_name-creation.log"
+
+
+openstack reservation lease show -f json $lease_name | tee "$lease_name.json"
