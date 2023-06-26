@@ -3,6 +3,9 @@
 # Exit immediately if any command fails
 set -o errexit
 
+# Display a message to ensure account is configured to UTC time
+echo -e "\e[1;33mMake sure your chameleon account is configured to UTC time.\e[0m"
+
 # Check if OS_USERNAME or OS_PROJECT_ID environment variables are not set
 if [[ -z "$OS_USERNAME" || -z "$OS_PROJECT_ID" ]]; then
     echo "The OS_USERNAME or OS_PROJECT_ID environment variable is not set."
@@ -38,6 +41,10 @@ end_time=$(date -u -d '+1 hours' +'%Y-%m-%d %H:%M')
 echo "Current UTC time: $current_time"
 echo "Lease start time: $start_time"
 echo "Lease end time: $end_time"
+
+echo "Creating lease $lease_name..."
+
+set -x
 
 # Run the openstack command with the provided lease name
 openstack reservation lease create \
