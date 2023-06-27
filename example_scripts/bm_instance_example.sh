@@ -3,16 +3,31 @@
 # Exit immediately if any command fails
 set -o errexit
 
+# Display a message to ensure account is configured to UTC time
+echo -e "\e[1;33mThis scripts create a new key pair if it does not exist in your account.\e[0m"
+
+
 # Check if all required arguments are provided
 if [[ $# -lt 3 ]]; then
-    echo "Usage: $0 <lease_name> <key_name> <instance_name> <optional: floating_ip>"
+    echo "Usage: $0 <lease_name> <keypair_name> <instance_name> <optional: floating_ip>"
+    # echo "CLI INFO: create your key pair first using 'openstack keypair create <key_name>'"
+    # echo "GUI INFO: https://chameleoncloud.readthedocs.io/en/latest/technical/gui.html#key-pairs"
     exit 1
 fi
 
 lease_name="$1"
 key_name="$2"
 instance_name="$3"
-FLOATING_IP_ADDRESS="$4" #optional
+floating_ip_address="$4" #optional
+
+# create key pair if not eixst in your account
+if ! openstack keypair show "$key_name" >/dev/null 2>&1; then
+    # Create the keypair
+    openstack keypair create "$key_name" | tee "$key_name.pem"
+    chmod 700 "$key_name.pem"
+else
+    echo "Key pair '$key_name' already exists."
+fi
 
 net_id="$(openstack network list -f value | head -n 1 | awk '{print $1}')" # sharednet1
 echo "sharednet1 Net-ID: $net_id"
