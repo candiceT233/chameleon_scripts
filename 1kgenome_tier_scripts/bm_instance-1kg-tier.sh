@@ -3,7 +3,7 @@
 # Exit immediately if any command fails
 set -o errexit
 
-# Display a message to ensure account is configured to UTC time
+# Display a message
 echo -e "\e[1;33mThis scripts create a new key pair if it does not exist in your account.\e[0m"
 
 
@@ -46,7 +46,23 @@ if [[ -z "$reservation_id" ]]; then
 fi
 echo "Reserveation ID: $reservation_id"
 
-exe_script=./my_cmd.sh
+# prepare the script to be executed on the instance
+# prepare the script to be executed on the instance
+starting_commands="
+#!/bin/bash
+sudo yum update -y
+cd ~
+git clone https://gitlab.pnnl.gov/perf-lab/bigflowtools/datalife.git
+cd datalife 
+bash artifacts_sc23/scripts/install_env_dep.sh
+wait
+
+cd /home/cc/datalife/evaluation_scripts/performance/1000genome_plot/1000genome_perf_number
+bash perf-test.sh
+"
+
+echo "$starting_commands" > my_cmd.sh
+exe_script=my_cmd.sh
 chmod u+x $exe_script
 
 
