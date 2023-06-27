@@ -3,7 +3,7 @@
 # Exit immediately if any command fails
 set -o errexit
 
-# Display a message to ensure account is configured to UTC time
+# Display a message to the user
 echo -e "\e[1;33mThis scripts create a new key pair if it does not exist in your account.\e[0m"
 
 

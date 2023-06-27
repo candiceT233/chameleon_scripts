@@ -29,3 +29,8 @@ fip_to_instance () {
 }
 
 fip_to_instance
+
+# Display a message to the user
+echo -e "\e[1;33mPlease make sure to clean up your floating ip after tests:\e[0m"
+echo "openstack server remove floating ip $floating_ip_address"
+echo "openstack floating ip delete $floating_ip_address"
