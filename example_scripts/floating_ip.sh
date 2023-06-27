@@ -7,7 +7,6 @@ set -o errexit
 # Check if all required arguments are provided
 if [[ $# -lt 1 ]]; then
     echo "Usage: $0 <instance_name>"
-    echo "Commands for using floating ip: allocate or attach"
     exit 1
 fi
 
@@ -25,9 +24,8 @@ fip_to_instance () {
     # echo floating_ip_address: $floating_ip_address
 
     openstack server add floating ip "$instance_name" "$floating_ip_address"
-
+    echo "Now you can ssh into the instance using the following command:"
+    echo "ssh -i /path/to/ssh_key cc@$floating_ip_address"
 }
-
-
 
 fip_to_instance

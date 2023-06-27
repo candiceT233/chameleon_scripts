@@ -46,8 +46,6 @@ echo "Creating lease $lease_name..."
 
 set -x
 
-# PUBLIC_NETWORK_ID=$(openstack network show public -c id -f value)
-#   --reservation resource_type=virtual:floatingip,network_id=${PUBLIC_NETWORK_ID},amount=1 \
 
 # Run the openstack command with the provided lease name
 openstack reservation lease create \
@@ -57,4 +55,4 @@ openstack reservation lease create \
   "$lease_name" | tee "$lease_name-creation.log"
 
 
-openstack reservation lease show -f json $lease_name | tee "$lease_name.json"
+# openstack reservation lease show -f json $lease_name | tee "$lease_name.json"
