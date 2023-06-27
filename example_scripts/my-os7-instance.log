@@ -1,0 +1,34 @@
++-------------------------------------+------------------------------------------------------------------+
+| Field                               | Value                                                            |
++-------------------------------------+------------------------------------------------------------------+
+| OS-DCF:diskConfig                   | MANUAL                                                           |
+| OS-EXT-AZ:availability_zone         |                                                                  |
+| OS-EXT-SRV-ATTR:host                | None                                                             |
+| OS-EXT-SRV-ATTR:hypervisor_hostname | None                                                             |
+| OS-EXT-SRV-ATTR:instance_name       |                                                                  |
+| OS-EXT-STS:power_state              | NOSTATE                                                          |
+| OS-EXT-STS:task_state               | scheduling                                                       |
+| OS-EXT-STS:vm_state                 | building                                                         |
+| OS-SRV-USG:launched_at              | None                                                             |
+| OS-SRV-USG:terminated_at            | None                                                             |
+| accessIPv4                          |                                                                  |
+| accessIPv6                          |                                                                  |
+| addresses                           |                                                                  |
+| adminPass                           | S3qJaJdf8xxA                                                     |
+| config_drive                        |                                                                  |
+| created                             | 2023-06-27T01:27:17Z                                             |
+| flavor                              | baremetal (baremetal)                                            |
+| hostId                              |                                                                  |
+| id                                  | e1d10f53-0372-41d0-bb15-21a4eba81f91                             |
+| image                               | CC-CentOS7 (2c64204d-c804-4533-b3b8-32e6c34752b0)                |
+| key_name                            | candice                                                          |
+| name                                | my-os7                                                           |
+| progress                            | 0                                                                |
+| project_id                          | e081833d8dde4102af564ed96f10035a                                 |
+| properties                          |                                                                  |
+| security_groups                     | name='default'                                                   |
+| status                              | BUILD                                                            |
+| updated                             | 2023-06-27T01:27:17Z                                             |
+| user_id                             | d17ec186e19457a2660b8d2acc4aa67790eea0af10036914e74914210bc10793 |
+| volumes_attached                    |                                                                  |
++-------------------------------------+------------------------------------------------------------------+

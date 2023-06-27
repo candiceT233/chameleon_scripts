@@ -1,0 +1,23 @@
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| created_at          | 2023-06-27T01:37:22Z                 |
+| description         |                                      |
+| dns_domain          | None                                 |
+| dns_name            | None                                 |
+| fixed_ip_address    | None                                 |
+| floating_ip_address | 129.114.108.165                      |
+| floating_network_id | 6189521e-06a0-4c43-b163-16cc11ce675b |
+| id                  | a9356f97-2dc4-4649-bbde-c2a07cbd1901 |
+| name                | 129.114.108.165                      |
+| port_details        | None                                 |
+| port_id             | None                                 |
+| project_id          | e081833d8dde4102af564ed96f10035a     |
+| qos_policy_id       | None                                 |
+| revision_number     | 0                                    |
+| router_id           | None                                 |
+| status              | DOWN                                 |
+| subnet_id           | None                                 |
+| tags                | []                                   |
+| updated_at          | 2023-06-27T01:37:22Z                 |
++---------------------+--------------------------------------+

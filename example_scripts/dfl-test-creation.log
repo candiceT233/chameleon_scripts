@@ -1,0 +1,60 @@
+Created a new lease:
++--------------+----------------------------------------------------------------------------+
+| Field        | Value                                                                      |
++--------------+----------------------------------------------------------------------------+
+| created_at   | 2023-06-27 00:40:31                                                        |
+| degraded     | False                                                                      |
+| end_date     | 2023-06-27T05:40:00.000000                                                 |
+| events       | {                                                                          |
+|              |     "created_at": "2023-06-27 00:40:33",                                   |
+|              |     "updated_at": null,                                                    |
+|              |     "id": "447b02a7-f81e-4a68-bdd3-a40ab5a176e6",                          |
+|              |     "lease_id": "737fa4e6-bb19-4dfe-82e1-7824792e4720",                    |
+|              |     "event_type": "end_lease",                                             |
+|              |     "time": "2023-06-27T05:40:00.000000",                                  |
+|              |     "status": "UNDONE"                                                     |
+|              | }                                                                          |
+|              | {                                                                          |
+|              |     "created_at": "2023-06-27 00:40:33",                                   |
+|              |     "updated_at": null,                                                    |
+|              |     "id": "c1c6567c-0256-4935-887a-d37b64692fd4",                          |
+|              |     "lease_id": "737fa4e6-bb19-4dfe-82e1-7824792e4720",                    |
+|              |     "event_type": "before_end_lease",                                      |
+|              |     "time": "2023-06-27T00:41:00.000000",                                  |
+|              |     "status": "UNDONE"                                                     |
+|              | }                                                                          |
+|              | {                                                                          |
+|              |     "created_at": "2023-06-27 00:40:33",                                   |
+|              |     "updated_at": null,                                                    |
+|              |     "id": "c83c63e0-0e45-428a-8332-73c8e4dc1c5f",                          |
+|              |     "lease_id": "737fa4e6-bb19-4dfe-82e1-7824792e4720",                    |
+|              |     "event_type": "start_lease",                                           |
+|              |     "time": "2023-06-27T00:41:00.000000",                                  |
+|              |     "status": "UNDONE"                                                     |
+|              | }                                                                          |
+| id           | 737fa4e6-bb19-4dfe-82e1-7824792e4720                                       |
+| name         | dfl-test                                                                   |
+| project_id   | e081833d8dde4102af564ed96f10035a                                           |
+| reservations | {                                                                          |
+|              |     "created_at": "2023-06-27 00:40:31",                                   |
+|              |     "updated_at": "2023-06-27 00:40:33",                                   |
+|              |     "id": "ae8a7c18-c510-4688-a426-14feefab85c8",                          |
+|              |     "lease_id": "737fa4e6-bb19-4dfe-82e1-7824792e4720",                    |
+|              |     "resource_id": "ba82b01c-625c-44ed-88ce-d368567bdce5",                 |
+|              |     "resource_type": "physical:host",                                      |
+|              |     "status": "pending",                                                   |
+|              |     "missing_resources": false,                                            |
+|              |     "resources_changed": false,                                            |
+|              |     "hypervisor_properties": "",                                           |
+|              |     "resource_properties": "[\"=\", \"$node_type\", \"compute_skylake\"]", |
+|              |     "before_end": "default",                                               |
+|              |     "on_start": "default",                                                 |
+|              |     "min": 1,                                                              |
+|              |     "max": 1                                                               |
+|              | }                                                                          |
+| start_date   | 2023-06-27T00:41:00.000000                                                 |
+| status       | PENDING                                                                    |
+| trust_id     | fcb8b4ac096e4aa2acceab79e769df7f                                           |
+| updated_at   | 2023-06-27 00:40:33                                                        |
+| user_id      | d17ec186e19457a2660b8d2acc4aa67790eea0af10036914e74914210bc10793           |
++--------------+----------------------------------------------------------------------------+

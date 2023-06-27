@@ -15,3 +15,4 @@ fi
 # Install dependencies
 python3 -m pip install python-openstackclient
 python3 -m pip install git+https://github.com/ChameleonCloud/python-blazarclient.git@chameleoncloud/xena
+python3 -m pip install python-neutronclient
