@@ -10,7 +10,7 @@ fi
 
 echo "Running remote code in background"
 
-ssh -T -i "$keypair_file" cc@"$floating_ip" << EOF &
+ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -T -i "$keypair_file" cc@"$floating_ip" << EOF &
     cd ~
     git clone https://gitlab.pnnl.gov/perf-lab/bigflowtools/datalife.git
     cd datalife 
