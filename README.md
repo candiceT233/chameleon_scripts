@@ -1,13 +1,17 @@
 # Tests on Chameleon Cloud
 Two options to run tests. One option reserves the most available compute nodes available, 2nd option reserve the storage_hierarchy nodes.
 
-## Prepare to use chameleon with CLI
+# Prepare to use chameleon with CLI
+## CLI authentication
+Follow instructions to [update your password](https://chameleoncloud.readthedocs.io/en/latest/technical/cli.html#cli-authentication) for CLI use.
+## Openstack RC file
 Pelase be ready to use the chameleon CLI tool with your openstack RC file. Instructions to download: [The OpenStack RC Script](https://chameleoncloud.readthedocs.io/en/latest/technical/cli.html#the-openstack-rc-script)
 Replace "your_rc_file" with your own file name.
 ```
 bash install_dep.sh
 source your_rc_file.sh
 ```
+
 # OPT 1: Running tests on general compute nodes
 Reserving general compute node what runs performance tests comparing /dev/shm (tmpfs) and it's HDD/SSD.
 *** We recommend you to reserve for at least 3 hours. ***\
