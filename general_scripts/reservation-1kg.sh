@@ -79,4 +79,4 @@ openstack reservation lease create \
   --end-date "$end_time" \
   "$lease_name" | tee "$lease_name-creation.log"
 
-openstack reservation lease show -f json $lease_name | tee "$lease_name.json"
+# openstack reservation lease show -f json $lease_name | tee "$lease_name.json"
