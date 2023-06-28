@@ -17,7 +17,7 @@ lease_name="$1"
 key_name="$2"
 instance_name="$3"
 floating_ip_address="$4" #optional
-image_name="1kg-tiered-06262023"
+image_name="1kgenome-sc23-tier"
 
 # create key pair if not eixst in your account
 if ! openstack keypair show "$key_name" >/dev/null 2>&1; then
