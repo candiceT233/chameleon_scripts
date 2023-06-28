@@ -34,10 +34,20 @@ fi
 lease_name="$1"
 lease_hours="$2"
 
-# Get the current UTC time and add 10 minutes and 2 hours
-current_time=$(date -u +"%Y-%m-%d %H:%M")
-start_time=$(date -u -v+1M +'%Y-%m-%d %H:%M')
-end_time=$(date -u -v+"$lease_hours"H +'%Y-%m-%d %H:%M')
+if [[ "$OSTYPE" == *darwin* ]]; then
+    # Get the current UTC time and add 1
+    current_time=$(date -u +"%Y-%m-%d %H:%M")
+    start_time=$(date -u -v+1M +'%Y-%m-%d %H:%M')
+    end_time=$(date -u -v+"$lease_hours"H +'%Y-%m-%d %H:%M')
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # Get the current UTC time and add 1 minutes
+    current_time=$(date -u +'%Y-%m-%d %H:%M')
+    start_time=$(date -u -d '+1 minutes' +'%Y-%m-%d %H:%M')
+    end_time=$(date -u -d "+$lease_hours hours" +'%Y-%m-%d %H:%M')
+else
+    echo "Please hardcode the current UTC time, \"start_time\" and \"end_time\" in script."
+    echo "Time format: \"YYYY-MM-DD HH:MM\""
+fi
 
 # Display the current UTC time, start time, and end time
 echo "Current UTC time: $current_time"
