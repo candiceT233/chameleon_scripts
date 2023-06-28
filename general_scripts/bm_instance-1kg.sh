@@ -35,7 +35,7 @@ echo "sharednet1 Net-ID: $net_id"
 # Get the string output of the lease show command
 lease_data="$(openstack reservation lease show -c reservations "$lease_name")"
 echo "Lease data: $lease_data"
-reservation_id==$(echo "$lease_data" | awk '/"id":/{getline; print $2}' | tr -d '",')
+reservation_id=$(echo "$lease_data" | awk -F'"' '/"id":/{print $4}')
 
 # Check if the lease_id is empty
 if [[ -z "$reservation_id" ]]; then
