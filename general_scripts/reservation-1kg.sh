@@ -26,7 +26,8 @@ fi
 # Check if lease name is provided as an argument
 if [[ $# -lt 3 ]]; then
     echo "Usage: $0 <lease_name> <lease_hours> <node note_type>"
-    echo "note_type: compute_skylake compute_haswell_ib compute_haswell compute_cascadelake compute_cascadelake_r"
+    echo "Example: $0 my-lease 4 my-test compute_skylake"
+    echo "note_type: compute_skylake compute_haswell_ib compute_cascadelake compute_cascadelake_r"
     exit 1
 fi
 

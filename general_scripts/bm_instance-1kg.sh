@@ -10,6 +10,7 @@ echo -e "\e[1;33mThis scripts create a new key pair if it does not exist in your
 # Check if all required arguments are provided
 if [[ $# -lt 3 ]]; then
     echo "Usage: $0 <lease_name> <keypair_name> <instance_name> <optional: floating_ip>"
+    echo "Example: $0 my-lease my_ssh my-test 129.114.108.165"
     exit 1
 fi
 
