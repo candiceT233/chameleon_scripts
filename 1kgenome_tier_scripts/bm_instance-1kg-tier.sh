@@ -10,8 +10,6 @@ echo -e "\e[1;33mThis scripts create a new key pair if it does not exist in your
 # Check if all required arguments are provided
 if [[ $# -lt 3 ]]; then
     echo "Usage: $0 <lease_name> <keypair_name> <instance_name> <optional: floating_ip>"
-    # echo "CLI INFO: create your key pair first using 'openstack keypair create <key_name>'"
-    # echo "GUI INFO: https://chameleoncloud.readthedocs.io/en/latest/technical/gui.html#key-pairs"
     exit 1
 fi
 
@@ -19,7 +17,7 @@ lease_name="$1"
 key_name="$2"
 instance_name="$3"
 floating_ip_address="$4" #optional
-image_name="1kgenome-sc23"
+image_name="1kg-tiered-06262023"
 
 # create key pair if not eixst in your account
 if ! openstack keypair show "$key_name" >/dev/null 2>&1; then
@@ -46,24 +44,13 @@ if [[ -z "$reservation_id" ]]; then
 fi
 echo "Reserveation ID: $reservation_id"
 
-# prepare the script to be executed on the instance
-# prepare the script to be executed on the instance
+# prepare the initial command to be executed on the instance
 starting_commands="
 #!/bin/bash
 sudo yum update -y
-cd ~
-git clone https://gitlab.pnnl.gov/perf-lab/bigflowtools/datalife.git
-cd datalife/artifacts_sc23/scripts
-bash install_env_dep.sh
-wait
-bash run.sh # generate stats
-
-cd /home/cc/datalife/evaluation_scripts/performance/1000genome_plot/1000genome_perf_number
-bash perf-test.sh
 "
-
 echo "$starting_commands" > my_cmd.sh
-exe_script=my_cmd.sh
+exe_script=./my_cmd.sh
 chmod u+x $exe_script
 
 
@@ -86,6 +73,7 @@ sleep 3 # wait for the instance to be created
 # Check if floating IP is available and assign it to the instance
 if [[ -n $floating_ip_address ]]; then
     openstack server add floating ip "$instance_name" "$floating_ip_address"
-    echo "Now you can ssh into the instance using the following command:"
-    echo "ssh -i $key_name.pem cc@$floating_ip_address"
+    echo "Your instance is starting now, usually takes about 10 minutes."
+    echo "Then ssh into the instance using the following command:"
+    echo "ssh -i /path/to/$key_name.pem cc@$floating_ip_address"
 fi
