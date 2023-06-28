@@ -45,10 +45,9 @@ if [[ ! " ${valid_node_types[@]} " =~ " $note_type " ]]; then
 fi
 
 # Get the current UTC time and add 10 minutes and 2 hours
-current_time=$(date -u +'%Y-%m-%d %H:%M')
-start_time=$(date -u -d '+1 minutes' +'%Y-%m-%d %H:%M')
-# end_time=$(date -u -d '+5 hours' +'%Y-%m-%d %H:%M')
-end_time=$(date -u -d "+$lease_hours hours" +'%Y-%m-%d %H:%M')
+current_time=$(date -u +"%Y-%m-%d %H:%M")
+start_time=$(date -u -v+1M +'%Y-%m-%d %H:%M')
+end_time=$(date -u -v+"$lease_hours"H +'%Y-%m-%d %H:%M')
 
 # Display the current UTC time, start time, and end time
 echo "Current UTC time: $current_time"
