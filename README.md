@@ -20,6 +20,7 @@ Reserving general compute node what runs performance tests comparing /dev/shm (t
 cd compute_node_scripts
 ./reservation-1kg.sh <lease_name> <lease_hours> <node note_type>
 ```
+Example: `./reservation-1kg.sh my-lease 4 my-test compute_skylake`\
 Enter your lease name, the how many hours (in number) you want the lease, and the node type. \
 The available note_types are: `compute_skylake compute_haswell_ib compute_haswell compute_cascadelake compute_cascadelake_r`
 
@@ -29,6 +30,7 @@ Here the floating_ip is optional, you can enter if you have one ready to be used
 ```
 ./bm_instance-1kg.sh <lease_name> <keypair_name> <instance_name> <optional: floating_ip>
 ```
+Example: `./bm_instance-1kg.sh my-lease my_ssh my-test 129.114.108.165`\
 If you provided floating_ip on step 2, skip step 3.
 
 3. Accessing the instance:
